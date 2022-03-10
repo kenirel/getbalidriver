@@ -1,0 +1,440 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+img { max-width: 100%; }
+  
+/* Override default gridlex hiccups */ 
+  [class*=col] { padding: 0; }
+  [class*=grid-], [class*=grid_], [class~=grid] { margin: 0; }
+
+:root {
+    --main-color: #5171fd;
+}
+
+/* Padding Utility Classes */ 
+.padded-sm { padding: 2.5%; }
+.padded    { padding: 5%;   }
+.padded-lg { padding: 10%;  }
+
+.padded-05 { padding: 0.5rem; }
+.padded-1  { padding: 1rem; }
+.padded-2  { padding: 2rem; }
+
+.padded-t  { padding-top: 5%; }
+.padded-b  { padding-bottom: 5%; }
+.padded-l  { padding-left: 5%; }
+.padded-r  { padding-right: 5%; }
+
+.padded-tb { padding-top: 5%; padding-bottom: 5%; }
+.padded-lr { padding-left: 5%; padding-right: 5%; }
+
+.padded-t-1 { padding-top: 1rem; }
+.padded-b-1 { padding-bottom: 1rem; }
+.padded-l-1 { padding-left: 1rem; }
+.padded-r-1 { padding-right: 1rem; }
+
+.padded-t-2 { padding-top: 2rem; }
+.padded-b-2 { padding-bottom: 2rem; }
+.padded-l-2 { padding-left: 2rem; }
+.padded-r-2 { padding-right: 2rem; }
+
+.padded-t-0 { padding-top: 0; }
+.padded-b-0 { padding-bottom: 0; }
+.padded-l-0 { padding-left: 0; }
+.padded-r-0 { padding-right: 0; }
+
+/* Margin Utility Classes */ 
+.margin-t { margin-top: 5%; }
+.margin-b { margin-bottom: 5%; }
+.margin-l { margin-left: 5%; }
+.margin-r { margin-right: 5%; }
+
+.margin-t-1 { margin-top: 1rem; }
+.margin-b-1 { margin-bottom: 1rem; }
+.margin-l-1 { margin-left: 1rem; }
+.margin-r-1 { margin-right: 1rem; }
+
+.margin-t-2 { margin-top: 2rem; }
+.margin-b-2 { margin-bottom: 2rem; }
+.margin-l-2 { margin-left: 2rem; }
+.margin-r-2 { margin-right: 2rem; }
+
+.margin-t-0 { margin-top: 0; }
+.margin-b-0 { margin-bottom: 0; }
+.margin-l-0 { margin-left: 0; }
+.margin-r-0 { margin-right: 0; }
+
+.margin-tb { margin-top: 5%; margin-bottom: 5%; }
+.margin-lr { margin-left: 5%; margin-right: 5%; }
+
+/* Text Alignment Utility Classes */
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+.text-center  { text-align: center; }
+
+/* Typography styles */
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: url("/assets/PlusJakartaSans-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: url("/assets/PlusJakartaSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: url("/assets/PlusJakartaSans-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "PlusJakartaSans";
+    src: url("/assets/PlusJakartaSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+    
+body {
+    font-family: "PlusJakartaSans", sans-serif;
+    color: rgb(80, 80, 80);
+    font-weight: 300;
+    letter-spacing: -0.4px;
+    word-spacing: 1.25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+p, a, ul, li { font-size: 1.1rem; }
+
+p {
+    line-height: 1.5; 
+    margin-bottom: 1rem;
+}
+
+ul {
+    margin-left: 2rem;
+    margin-top: .5rem;
+}
+
+li {
+    padding-left: .25rem;
+    margin-bottom: .25rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+h2:last-child, 
+h3:last-child, 
+h4:last-child, 
+h5:last-child, 
+h6:last-child, 
+p:last-child {
+	margin-bottom: 0;
+}
+
+.shadow {
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.1),
+                0px 8px 13px rgba(0,0,0,0.07),
+                0px 18px 23px rgba(0,0,0,0.07);
+}
+
+.text-lm { font-size: 1.5rem; }
+.text-md { font-size: 2.5rem; }
+.text-lg { font-size: 3.5rem; }
+.text-xl { font-size: 4.5rem; }
+.text-xxl { font-size: 7.5rem; }
+.text-review { font-size: 2rem; }
+
+.text-bold { font-weight: 700; }
+.text-regular { font-weight: 400; }
+
+.text-featured { color: var(--main-color); }
+.text-dark { color: #343434; }
+.text-light { color: #f8f6f4; }
+
+/* Button */
+.button {
+    display: inline-block;
+    color: #fff;
+    background-color: var(--main-color);
+    font-weight: 400;
+    border: 1px solid var(--main-color);
+    border-radius: 0.25rem;
+    padding: 1rem 2rem;
+    margin: 0.75rem 0;
+}
+
+.button:hover {
+    color: var(--main-color);
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+}
+
+/* Form */
+form input, 
+form textarea {
+  width: 100%;
+  margin: .75rem 0;
+  padding: .75rem;
+  border: 1px solid rgb(220,220,220);
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: var(--main-color);
+}
+
+textarea {
+  min-height: 8rem;
+}
+
+form label {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 700;
+}
+
+form label:first-child {
+    margin-top: 0;
+}
+
+form button {
+    display: inline-block;
+    color: var(--main-color);
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid var(--main-color);
+    border-radius: 0.25rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    margin: 0.75rem 0;
+}
+
+form button:hover {
+    color: #fff;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* Header & Footer */
+header {
+    padding: 1% 5%;
+}
+
+header a, footer a {
+    font-weight: 400;
+    padding: 1% 2%;
+}
+  
+.emphasis-button {
+    border: 2px solid;
+    border-radius: 0.25rem;
+    margin-left: 0.5rem;
+    color: var(--main-color);
+}
+
+.logo {
+    color: var(--main-color);
+}
+
+footer {
+    padding-bottom: 1rem;
+    color: rgb(125,120,120);
+    background-color: #f8f6f4;
+}
+
+/* Background Image Utility Class */
+.bg-image {
+    background-color: grey; /* Set a fall-back color while images are loading */ 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+  
+/* Aspect Ratios with percentage unit are only effective if the element (the <div>) is inside a parent container or column, it can't be applied to the column itself. */
+.portrait-tall  { padding-bottom: 175%; }
+.portrait       { padding-bottom: 125%; }
+.square         { padding-bottom: 100%; }
+.landscape      { padding-bottom: 66%;  }
+.landscape-wide { padding-bottom: 66%;  }
+
+/* Minimal Height Utility Classes */
+.tall-50 { min-height: 50vh; }
+.tall-60 { min-height: 60vh; }
+.tall-70 { min-height: 70vh; }
+.tall-80 { min-height: 80vh; }
+.tall-90 { min-height: 90vh; }
+  
+/* Background Position Utility Classes*/
+.bg-pos-t { background-position: top; }
+.bg-pos-b { background-position: bottom; }
+.bg-pos-l { background-position: left; }
+.bg-pos-r { background-position: right; }
+.bg-pos-t-l { background-position: 10% 10%; }
+.bg-pos-b-r { background-position: 85% 85%; }
+
+/* Images & Background Images */
+.bg-dark { 
+    background-color: rgb(60,60,65); 
+    color: #fff;
+}
+  
+.bg-featured { background-color: #018ca2; }
+.bg-light { background-color: #f8f6f4; }
+
+.bg-hero {
+    background-image: linear-gradient( 140deg,  rgba(52, 128, 228, 0.5) 1.7%, rgba(62, 151, 172, 0.75) 51.1%, rgba(123, 189, 219, 0.5) 95.5%), url('/images/tegenungan-waterfall-swing-hero-min.jpg');
+    background-position: center 80%;
+}
+
+.bg-testimonial { 
+    background-image: linear-gradient( 180deg,  rgba(255, 255, 255, 0.45) 0%, rgba(241, 241, 241, 0.65) 100%), url('/images/bali-beach-birdeye-min.jpg');
+    background-position: center 65%;
+}
+
+.bg-venue { background-image: url('/images/ayung-river-rafting-action-2.jpg'); }
+.bg-map { background-image: url('/images/light-colored-map.png'); } 
+
+.shape-teardrop {
+    border-radius: 5rem;
+    border-bottom-right-radius: 0;
+}
+
+.shape-window {
+    max-height: 500px;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem; 
+}
+
+/* Image gallery padding size */
+.gallery [class*="col-"] {
+    padding: 0.5%;
+}
+
+/* Box shadow */
+.box {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* Cars overlapping homepage */
+.overlap {
+    padding: 0 2rem 0 2rem;
+    margin-top: -50px;
+    padding-bottom: 0;
+}
+
+.overlap-child {
+    padding: 0 1rem 0 1rem;
+}
+
+/* General CSS Responsive Styles (Apply everywhere unless overridden) */ 
+.show-xs,
+.show-sm,
+.show-md {
+    display: none;
+}
+
+/* ------- MD Media Query (64em / 1024px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+@media (max-width: 64em) {
+    .show-md { display: block; }
+    .hide-md { display: none;  }
+
+    .text-lm { font-size: 1.3rem; }
+    .text-md { font-size: 2rem; }
+    .text-lg { font-size: 3rem; }
+    .text-xl { font-size: 3.5rem; }
+    .text-xxl { font-size: 6rem; }
+    .text-review { font-size: 1.5rem; }
+}
+
+/* ------- SM Media Query (48em / 768px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 768px, or zoomed in equivalent */ 
+@media (max-width: 48em) {
+    .show-sm { display: block; }
+    .hide-sm { display: none;  }
+        
+    .sm-text-center { text-align: center; }
+    .sm-text-left { text-align: left; }
+    .sm-text-right { text-align: right; }
+
+    .sm-padded { padding: 5%; }
+    .sm-padded-1 { padding: 1rem; }
+    .sm-padded-05 { padding: 0.5rem; }
+
+    .sm-padded-t-0 { padding-top: 0; }
+    .sm-padded-b-0 { padding-bottom: 0; }
+    .sm-padded-l-0 { padding-left: 0; }
+    .sm-padded-r-0 { padding-right: 0; }
+
+    .sm-padded-t-1 { padding-top: 1rem; }
+    .sm-padded-b-1 { padding-bottom: 1rem; }
+    .sm-padded-l-1 { padding-left: 1rem; }
+    .sm-padded-r-1 { padding-right: 1rem; }
+    
+    .sm-margin-t-0 { margin-top: 0; }
+    .sm-margin-b-0 { margin-bottom: 0; }
+    .sm-margin-l-0 { margin-left: 0; }
+    .sm-margin-r-0 { margin-right: 0; }
+
+    .sm-tall-50 { min-height: 50vh; }
+    .sm-tall-60 { min-height: 60vh; }
+    .sm-tall-70 { min-height: 70vh; }
+    .sm-tall-80 { min-height: 80vh; }
+    .sm-tall-90 { min-height: 90vh; }
+
+    /* Custom style on SM size */
+    .bg-leaves { background-image: url('/images/leaves-light.png'); }
+    
+    p, a, ul, li { font-size: 1rem; }
+    li { margin-bottom: .4rem; }
+    
+    .overlap {
+        padding: 0 0.25rem 0 0.25rem;
+    }
+
+    .overlap-child {
+        padding: 0 0.25rem 0 0.25rem;
+    }
+}
+
+/* ------- XS Media Query (36em / 576px) --------------- */ 
+/* - Styles added here will apply at devices smaller than 576px, or zoomed in equivalent */ 
+@media (max-width: 36em) {
+    .show-xs { display: block; }
+    .hide-xs { display: none;  }
+
+    .text-lm { font-size: 1.15rem; }
+    .text-md { font-size: 1.75rem; }
+    .text-lg { font-size: 2.5rem; }
+    .text-xl { font-size: 3rem; }
+    .text-xxl { font-size: 5rem; }
+    .text-review { font-size: 1.25rem; }
+
+    /* Custom style on XS size */
+    p, a, ul, li { font-size: .95rem; }
+}
